@@ -17,7 +17,7 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
-        self.viewController = [[DSViewController alloc] initWithNibName:@"DSViewController_iPhone" bundle:nil];
+        self.viewController = [[DSViewController alloc] initWithNibName:@"DSViewController" bundle:nil];
     } else {
         self.viewController = [[DSViewController alloc] initWithNibName:@"DSViewController_iPad" bundle:nil];
     }

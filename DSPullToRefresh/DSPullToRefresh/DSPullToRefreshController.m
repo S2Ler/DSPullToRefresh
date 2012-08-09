@@ -1,31 +1,29 @@
 //
-//  DSPullToRefreshViewController
+//  DSPullToRefreshController
 //  DSPullToRefresh
 //
 //  Created by Alexander Belyavskiy on 8/6/12.
 
 #pragma mark - include
 #import <CoreGraphics/CoreGraphics.h>
-#import "DSPullToRefreshViewController.h"
+#import "DSPullToRefreshController.h"
 #import "DSPullToRefreshView.h"
-#import "DSPullToRefreshViewControllerDelegate.h"
+#import "DSPullToRefreshControllerDelegate.h"
 
 #pragma mark - private
 #define ANIMATION_DURATION 0.3
 
-@interface DSPullToRefreshViewController ()
+@interface DSPullToRefreshController ()
 @property (nonatomic, assign) BOOL isLoading;
 @property (nonatomic, assign) BOOL isDragging;
 
 @property (nonatomic, strong) UIView<DSPullToRefreshView> *refreshView;
 @end
 
-@implementation DSPullToRefreshViewController
+@implementation DSPullToRefreshController
 
-- (void)viewDidLoad
+- (void)createViewHierarchy
 {
-  [super viewDidLoad];
-
   [self setRefreshView:[[[self pullToRefreshViewClass] alloc] init]];
   CGRect refreshViewFrame = [[self refreshView] frame];
   refreshViewFrame.origin.y = -refreshViewFrame.size.height;
@@ -126,7 +124,7 @@
   }];
 
   NSOperation *workOperation
-    = [[self delegate] pullToRefreshViewControllerDidRequestedWorkOperation:self];
+    = [[self delegate] pullToRefreshControllerDidRequestedWorkOperation:self];
 
   [[self refreshView] activateViewWithWorkOperation:workOperation
                                   completionHandler:^(BOOL success)

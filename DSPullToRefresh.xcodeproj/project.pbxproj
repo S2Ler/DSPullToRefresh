@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0977CED915D36C2300F2640B /* DSViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0977CED815D36C2300F2640B /* DSViewController.xib */; };
 		09953F3915CF156300EECB95 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09953F3815CF156300EECB95 /* UIKit.framework */; };
 		09953F3B15CF156300EECB95 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09953F3A15CF156300EECB95 /* Foundation.framework */; };
 		09953F3D15CF156300EECB95 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09953F3C15CF156300EECB95 /* CoreGraphics.framework */; };
@@ -14,15 +15,14 @@
 		09953F4515CF156300EECB95 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 09953F4415CF156300EECB95 /* main.m */; };
 		09953F4915CF156300EECB95 /* DSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 09953F4815CF156300EECB95 /* DSAppDelegate.m */; };
 		09953F4C15CF156300EECB95 /* DSViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09953F4B15CF156300EECB95 /* DSViewController.m */; };
-		09953F4F15CF156300EECB95 /* DSViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09953F4D15CF156300EECB95 /* DSViewController_iPhone.xib */; };
-		09953F5215CF156300EECB95 /* DSViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09953F5015CF156300EECB95 /* DSViewController_iPad.xib */; };
 		09A6053415D357C4004E6B62 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09A6053315D357C4004E6B62 /* QuartzCore.framework */; };
 		62DD116CDDACC4CCF88B8501 /* DSPullToRefreshViewSimple.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DD126AE3A274A20FC6A0AB /* DSPullToRefreshViewSimple.m */; };
-		62DD136C42EAE55D2CEECC1D /* DSPullToRefreshViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DD1F2E1D843807E44E76A9 /* DSPullToRefreshViewController.m */; };
+		62DD136C42EAE55D2CEECC1D /* DSPullToRefreshController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DD1F2E1D843807E44E76A9 /* DSPullToRefreshController.m */; };
 		62DD198EFD5E7F4C562C7D0D /* arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 62DD1E73CB665C87A737691D /* arrow.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0977CED815D36C2300F2640B /* DSViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DSViewController.xib; sourceTree = "<group>"; };
 		09953F3415CF156300EECB95 /* DSPullToRefresh.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DSPullToRefresh.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09953F3815CF156300EECB95 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		09953F3A15CF156300EECB95 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -35,16 +35,14 @@
 		09953F4815CF156300EECB95 /* DSAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DSAppDelegate.m; sourceTree = "<group>"; };
 		09953F4A15CF156300EECB95 /* DSViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSViewController.h; sourceTree = "<group>"; };
 		09953F4B15CF156300EECB95 /* DSViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DSViewController.m; sourceTree = "<group>"; };
-		09953F4E15CF156300EECB95 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/DSViewController_iPhone.xib; sourceTree = "<group>"; };
-		09953F5115CF156300EECB95 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/DSViewController_iPad.xib; sourceTree = "<group>"; };
 		09A6053315D357C4004E6B62 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		62DD126AE3A274A20FC6A0AB /* DSPullToRefreshViewSimple.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSPullToRefreshViewSimple.m; sourceTree = "<group>"; };
 		62DD12BE9F7923A399609E4A /* DSPullToRefreshViewSimple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSPullToRefreshViewSimple.h; sourceTree = "<group>"; };
 		62DD134BB8BFFD7ECEE8431C /* DSPullToRefreshView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSPullToRefreshView.h; sourceTree = "<group>"; };
-		62DD174277C49B0EEFF0E661 /* DSPullToRefreshViewControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSPullToRefreshViewControllerDelegate.h; sourceTree = "<group>"; };
-		62DD1E62743727067D730803 /* DSPullToRefreshViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSPullToRefreshViewController.h; sourceTree = "<group>"; };
+		62DD174277C49B0EEFF0E661 /* DSPullToRefreshControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSPullToRefreshControllerDelegate.h; sourceTree = "<group>"; };
+		62DD1E62743727067D730803 /* DSPullToRefreshController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSPullToRefreshController.h; sourceTree = "<group>"; };
 		62DD1E73CB665C87A737691D /* arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow.png; sourceTree = "<group>"; };
-		62DD1F2E1D843807E44E76A9 /* DSPullToRefreshViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSPullToRefreshViewController.m; sourceTree = "<group>"; };
+		62DD1F2E1D843807E44E76A9 /* DSPullToRefreshController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSPullToRefreshController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,10 +117,10 @@
 			children = (
 				62DD12BE9F7923A399609E4A /* DSPullToRefreshViewSimple.h */,
 				62DD126AE3A274A20FC6A0AB /* DSPullToRefreshViewSimple.m */,
-				62DD174277C49B0EEFF0E661 /* DSPullToRefreshViewControllerDelegate.h */,
+				62DD174277C49B0EEFF0E661 /* DSPullToRefreshControllerDelegate.h */,
 				62DD134BB8BFFD7ECEE8431C /* DSPullToRefreshView.h */,
-				62DD1E62743727067D730803 /* DSPullToRefreshViewController.h */,
-				62DD1F2E1D843807E44E76A9 /* DSPullToRefreshViewController.m */,
+				62DD1E62743727067D730803 /* DSPullToRefreshController.h */,
+				62DD1F2E1D843807E44E76A9 /* DSPullToRefreshController.m */,
 			);
 			path = DSPullToRefresh;
 			sourceTree = "<group>";
@@ -131,11 +129,10 @@
 			isa = PBXGroup;
 			children = (
 				09953F4B15CF156300EECB95 /* DSViewController.m */,
+				0977CED815D36C2300F2640B /* DSViewController.xib */,
 				09953F4A15CF156300EECB95 /* DSViewController.h */,
 				09953F4815CF156300EECB95 /* DSAppDelegate.m */,
 				09953F4715CF156300EECB95 /* DSAppDelegate.h */,
-				09953F4D15CF156300EECB95 /* DSViewController_iPhone.xib */,
-				09953F5015CF156300EECB95 /* DSViewController_iPad.xib */,
 			);
 			name = SampleCode;
 			sourceTree = "<group>";
@@ -193,9 +190,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				09953F4315CF156300EECB95 /* InfoPlist.strings in Resources */,
-				09953F4F15CF156300EECB95 /* DSViewController_iPhone.xib in Resources */,
-				09953F5215CF156300EECB95 /* DSViewController_iPad.xib in Resources */,
 				62DD198EFD5E7F4C562C7D0D /* arrow.png in Resources */,
+				0977CED915D36C2300F2640B /* DSViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,7 +205,7 @@
 				09953F4515CF156300EECB95 /* main.m in Sources */,
 				09953F4915CF156300EECB95 /* DSAppDelegate.m in Sources */,
 				09953F4C15CF156300EECB95 /* DSViewController.m in Sources */,
-				62DD136C42EAE55D2CEECC1D /* DSPullToRefreshViewController.m in Sources */,
+				62DD136C42EAE55D2CEECC1D /* DSPullToRefreshController.m in Sources */,
 				62DD116CDDACC4CCF88B8501 /* DSPullToRefreshViewSimple.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -223,22 +219,6 @@
 				09953F4215CF156300EECB95 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		09953F4D15CF156300EECB95 /* DSViewController_iPhone.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				09953F4E15CF156300EECB95 /* en */,
-			);
-			name = DSViewController_iPhone.xib;
-			sourceTree = "<group>";
-		};
-		09953F5015CF156300EECB95 /* DSViewController_iPad.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				09953F5115CF156300EECB95 /* en */,
-			);
-			name = DSViewController_iPad.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

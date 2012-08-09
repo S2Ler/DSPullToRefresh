@@ -1,19 +1,20 @@
 //
-//  DSPullToRefreshViewController
+//  DSPullToRefreshController
 //  DSPullToRefresh
 //
 //  Created by Alexander Belyavskiy on 8/6/12.
 
 #import <Foundation/Foundation.h>
 
-@protocol DSPullToRefreshViewControllerDelegate;
+@protocol DSPullToRefreshControllerDelegate;
 @protocol DSPullToRefreshView;
 
 
-@interface DSPullToRefreshViewController: UIViewController<UITableViewDelegate>
-@property (nonatomic, weak) id<DSPullToRefreshViewControllerDelegate> delegate;
+@interface DSPullToRefreshController: NSObject<UITableViewDelegate>
+@property (nonatomic, weak) id<DSPullToRefreshControllerDelegate> delegate;
 @property (nonatomic, strong) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) Class pullToRefreshViewClass;
 
 @property (nonatomic, strong, readonly) UIView<DSPullToRefreshView> *refreshView;
+- (void)createViewHierarchy;
 @end

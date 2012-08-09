@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "DSPullToRefreshViewController.h"
-#import "DSPullToRefreshViewControllerDelegate.h"
+#import "DSPullToRefreshController.h"
+#import "DSPullToRefreshControllerDelegate.h"
 
-@interface DSViewController : DSPullToRefreshViewController<UITableViewDataSource, DSPullToRefreshViewControllerDelegate>
-
+@interface DSViewController : UIViewController<UITableViewDataSource, DSPullToRefreshControllerDelegate>
+@property (nonatomic, strong) IBOutlet DSPullToRefreshController *pullToRefreshController;
 @end

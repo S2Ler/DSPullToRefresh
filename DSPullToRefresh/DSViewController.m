@@ -10,7 +10,6 @@
 #import "DSPullToRefreshViewSimple.h"
 
 @interface DSViewController ()
-
 @end
 
 @implementation DSViewController
@@ -19,7 +18,8 @@
 {
   self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
   if (self) {
-    [self setPullToRefreshViewClass:[DSPullToRefreshViewSimple class]];
+
+    
   }
   return self;
 }
@@ -27,7 +27,9 @@
 - (void)viewDidLoad
 {
   [super viewDidLoad];
-  [self setDelegate:self];
+  [[self pullToRefreshController] setDelegate:self];
+  [[self pullToRefreshController] setPullToRefreshViewClass:[DSPullToRefreshViewSimple class]];
+  [[self pullToRefreshController] createViewHierarchy];
 }
 
 - (void)didReceiveMemoryWarning
@@ -57,7 +59,7 @@
   return [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"REUSE"];
 }
 
-- (NSOperation *)pullToRefreshViewControllerDidRequestedWorkOperation:(DSPullToRefreshViewController *)theController
+- (NSOperation *)pullToRefreshControllerDidRequestedWorkOperation:(DSPullToRefreshController *)theController
 {
   return [NSBlockOperation blockOperationWithBlock:^
   {

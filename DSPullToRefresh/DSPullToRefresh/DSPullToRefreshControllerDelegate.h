@@ -7,5 +7,6 @@
 @class DSPullToRefreshController;
 
 @protocol DSPullToRefreshControllerDelegate<NSObject, UITableViewDelegate>
-- (NSOperation *)pullToRefreshControllerDidRequestedWorkOperation:(DSPullToRefreshController *)theController;
+- (NSOperation *)pullToRefreshControllerDidRequestedWorkOperation:(DSPullToRefreshController *)theController
+                                                  forViewPosition:(DSPullToRefreshViewPosition)thePosition;
 @end

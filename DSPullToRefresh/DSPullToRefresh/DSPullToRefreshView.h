@@ -25,6 +25,10 @@ typedef void (^ds_finish_handler)(BOOL success);
 /** 0.0 to 1.0 */
 @property (nonatomic, assign) CGFloat overScrollPercent;
 
+//TODO: Review these two params
+@property (nonatomic, assign) BOOL isLoading;
+@property (nonatomic, assign) BOOL isDragging;
+
 - (id)init;
 
 - (void)activateViewWithWorkOperation:(NSOperation *)theWorkOperation

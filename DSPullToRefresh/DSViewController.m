@@ -51,7 +51,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-  return 1;
+  return 20;
 }
 
 
@@ -64,10 +64,14 @@
 }
 
 - (NSOperation *)pullToRefreshControllerDidRequestedWorkOperation:(DSPullToRefreshController *)theController
+                                                  forViewPosition:(DSPullToRefreshViewPosition)thePosition
 {
   return [NSBlockOperation blockOperationWithBlock:^
   {
-    [NSThread sleepForTimeInterval:2];
+    double x = 1;
+    for (long long i = 0; i < 100000000; i++) {
+      x = x + sqrt((double)i);
+    }
   }];
 }
 

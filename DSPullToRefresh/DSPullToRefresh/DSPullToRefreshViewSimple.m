@@ -16,6 +16,8 @@
 
 @implementation DSPullToRefreshViewSimple
 @synthesize overScrollPercent = _overScrollPercent;
+@synthesize isLoading = _isLoading;
+@synthesize isDragging = _isDragging;
 
 #pragma mark - DSPullToRefreshView
 - (DSPullToRefreshViewMode)mode

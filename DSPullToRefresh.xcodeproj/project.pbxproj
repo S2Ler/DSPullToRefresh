@@ -40,6 +40,7 @@
 		62DD12BE9F7923A399609E4A /* DSPullToRefreshViewSimple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSPullToRefreshViewSimple.h; sourceTree = "<group>"; };
 		62DD134BB8BFFD7ECEE8431C /* DSPullToRefreshView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSPullToRefreshView.h; sourceTree = "<group>"; };
 		62DD174277C49B0EEFF0E661 /* DSPullToRefreshControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSPullToRefreshControllerDelegate.h; sourceTree = "<group>"; };
+		62DD1744CCF5F591C0020860 /* DSPullToRefreshViewsPositions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSPullToRefreshViewsPositions.h; sourceTree = "<group>"; };
 		62DD1E62743727067D730803 /* DSPullToRefreshController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DSPullToRefreshController.h; sourceTree = "<group>"; };
 		62DD1E73CB665C87A737691D /* arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow.png; sourceTree = "<group>"; };
 		62DD1F2E1D843807E44E76A9 /* DSPullToRefreshController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DSPullToRefreshController.m; sourceTree = "<group>"; };
@@ -115,6 +116,7 @@
 		62DD124382D755575F691FCA /* DSPullToRefresh */ = {
 			isa = PBXGroup;
 			children = (
+				62DD1744CCF5F591C0020860 /* DSPullToRefreshViewsPositions.h */,
 				62DD12BE9F7923A399609E4A /* DSPullToRefreshViewSimple.h */,
 				62DD126AE3A274A20FC6A0AB /* DSPullToRefreshViewSimple.m */,
 				62DD174277C49B0EEFF0E661 /* DSPullToRefreshControllerDelegate.h */,

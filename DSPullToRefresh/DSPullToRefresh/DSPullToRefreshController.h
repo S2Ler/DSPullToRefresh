@@ -5,16 +5,10 @@
 //  Created by Alexander Belyavskiy on 8/6/12.
 
 #import <Foundation/Foundation.h>
+#import "DSPullToRefreshViewsPositions.h"
 
 @protocol DSPullToRefreshControllerDelegate;
 @protocol DSPullToRefreshView;
-
-typedef enum {
-  DSPullToRefreshViewPositionTop = 1,
-  DSPullToRefreshViewPositionRight = 1 << 1,
-  DSPullToRefreshViewPositionBottom = 1 << 2,
-  DSPullToRefreshViewPositionLeft = 1 << 3
-} DSPullToRefreshViewPosition;
 
 @interface DSPullToRefreshController: NSObject
 /** REQUIRED */

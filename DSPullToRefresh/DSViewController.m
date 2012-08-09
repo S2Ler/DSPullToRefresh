@@ -19,7 +19,7 @@
   self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
   if (self) {
 
-    
+
   }
   return self;
 }
@@ -28,7 +28,8 @@
 {
   [super viewDidLoad];
   [[self pullToRefreshController] setDelegate:self];
-  [[self pullToRefreshController] setPullToRefreshViewClass:[DSPullToRefreshViewSimple class]];
+  [[self pullToRefreshController]
+         setPullToRefreshViewClass:[DSPullToRefreshViewSimple class]];
   [[self pullToRefreshController] createViewHierarchy];
 }
 
@@ -42,7 +43,8 @@
 {
   if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
     return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
-  } else {
+  }
+  else {
     return YES;
   }
 }
@@ -56,16 +58,35 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView
          cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-  return [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"REUSE"];
+  return [[UITableViewCell alloc]
+                           initWithStyle:UITableViewCellStyleDefault
+                         reuseIdentifier:@"REUSE"];
 }
 
 - (NSOperation *)pullToRefreshControllerDidRequestedWorkOperation:(DSPullToRefreshController *)theController
 {
   return [NSBlockOperation blockOperationWithBlock:^
   {
-     [NSThread sleepForTimeInterval:2];
+    [NSThread sleepForTimeInterval:2];
   }];
-
 }
+
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
+{
+  [[self pullToRefreshController] scrollViewWillBeginDragging:scrollView];
+}
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+  [[self pullToRefreshController] scrollViewDidScroll:scrollView];
+}
+
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView
+                  willDecelerate:(BOOL)decelerate
+{
+  [[self pullToRefreshController] scrollViewDidEndDragging:scrollView
+                                            willDecelerate:decelerate];
+}
+
 
 @end

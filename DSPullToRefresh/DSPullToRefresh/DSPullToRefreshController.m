@@ -5,7 +5,6 @@
 //  Created by Alexander Belyavskiy on 8/6/12.
 
 #pragma mark - include
-#import <CoreGraphics/CoreGraphics.h>
 #import "DSPullToRefreshController.h"
 #import "DSPullToRefreshView.h"
 #import "DSPullToRefreshControllerDelegate.h"
@@ -29,8 +28,6 @@
   refreshViewFrame.origin.y = -refreshViewFrame.size.height;
   [[self refreshView] setFrame:refreshViewFrame];
   [[self tableView] addSubview:[self refreshView]];
-
-  [[self tableView] setDelegate:self];
 }
 
 
@@ -48,13 +45,13 @@
       return 0.0;
     }
     else if (offset < -heightForActivation) {
-      return  1.0;
+      return 1.0;
     }
     else {
-      return  offset / heightForActivation;
+      return offset / heightForActivation;
     }
   }
-  
+
   NSAssert(FALSE, @"You shouldn't be here", nil);
   return 0.0;
 }
@@ -93,7 +90,7 @@
       }
       else if ([[self refreshView] mode] == DSPullToRefreshViewModeReleaseToActivate) {
         [[self refreshView] setOverScrollPercent:
-                              [self currentActivationProgressWithScrollView:scrollView]];
+          [self currentActivationProgressWithScrollView:scrollView]];
       }
     }];
   }
@@ -132,9 +129,11 @@
                                     [self setIsLoading:NO];
                                     [UIView animateWithDuration:ANIMATION_DURATION
                                                      animations:^
-                                    {
-                                      self.tableView.contentInset = UIEdgeInsetsZero;
-                                    }];
+                                                     {
+                                                       self.tableView.contentInset
+                                                         = UIEdgeInsetsZero;
+                                                     }];
                                   }];
 }
+
 @end

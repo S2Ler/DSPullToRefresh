@@ -11,7 +11,7 @@
 
 
 @interface DSPullToRefreshController: NSObject
-@property (nonatomic, weak) id<DSPullToRefreshControllerDelegate> delegate;
+@property (nonatomic, weak) IBOutlet id<DSPullToRefreshControllerDelegate> delegate;
 @property (nonatomic, strong) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) Class pullToRefreshViewClass;
 

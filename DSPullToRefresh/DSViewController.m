@@ -29,6 +29,8 @@
   [super viewDidLoad];
   [[self pullToRefreshController] setDelegate:self];
   [[self pullToRefreshController]
+    setViewsPositions:DSPullToRefreshViewPositionBottom | DSPullToRefreshViewPositionTop];
+  [[self pullToRefreshController]
          setPullToRefreshViewClassHorizontal:[DSPullToRefreshViewSimple class]];
   [[self pullToRefreshController] createViewHierarchy];
 }

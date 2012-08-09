@@ -29,7 +29,6 @@
 
 - (void)createViewHierarchy
 {
-  [self setViewsPositions:DSPullToRefreshViewPositionTop | DSPullToRefreshViewPositionBottom];
   if ([self viewsPositions] & DSPullToRefreshViewPositionTop) {
     [self setRefreshViewTop:[[[self pullToRefreshViewClassHorizontal] alloc] init]];
     CGRect refreshViewFrame = [[self refreshViewTop] frame];

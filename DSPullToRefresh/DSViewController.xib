@@ -112,7 +112,7 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">tableView</string>
+						<string key="label">scrollView</string>
 						<reference key="source" ref="64822927"/>
 						<reference key="destination" ref="518757345"/>
 					</object>
@@ -180,13 +180,13 @@
 					<string key="className">DSPullToRefreshController</string>
 					<string key="superclassName">NSObject</string>
 					<object class="NSMutableDictionary" key="outlets">
-						<string key="NS.key.0">tableView</string>
+						<string key="NS.key.0">scrollView</string>
 						<string key="NS.object.0">UITableView</string>
 					</object>
 					<object class="NSMutableDictionary" key="toOneOutletInfosByName">
-						<string key="NS.key.0">tableView</string>
+						<string key="NS.key.0">scrollView</string>
 						<object class="IBToOneOutletInfo" key="NS.object.0">
-							<string key="name">tableView</string>
+							<string key="name">scrollView</string>
 							<string key="candidateClassName">UITableView</string>
 						</object>
 					</object>

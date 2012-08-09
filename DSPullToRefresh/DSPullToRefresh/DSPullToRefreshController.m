@@ -27,7 +27,7 @@
   CGRect refreshViewFrame = [[self refreshView] frame];
   refreshViewFrame.origin.y = -refreshViewFrame.size.height;
   [[self refreshView] setFrame:refreshViewFrame];
-  [[self tableView] addSubview:[self refreshView]];
+  [[self scrollView] addSubview:[self refreshView]];
 }
 
 
@@ -70,11 +70,11 @@
   if ([self isLoading]) {
     // Update the content inset, good for section headers
     if (scrollView.contentOffset.y > 0) {
-      self.tableView.contentInset = UIEdgeInsetsZero;
+      self.scrollView.contentInset = UIEdgeInsetsZero;
     }
     else if (scrollView.contentOffset.y >= -[[self refreshView]
                                                    heightForAutoActivation]) {
-      self.tableView.contentInset = UIEdgeInsetsMake(-scrollView.contentOffset.y,
+      self.scrollView.contentInset = UIEdgeInsetsMake(-scrollView.contentOffset.y,
                                                      0,
                                                      0,
                                                      0);
@@ -116,7 +116,7 @@
   // Show the header
   [UIView animateWithDuration:ANIMATION_DURATION animations:^
   {
-    self.tableView.contentInset
+    self.scrollView.contentInset
       = UIEdgeInsetsMake([[self refreshView] heightForActivation], 0, 0, 0);
   }];
 
@@ -130,7 +130,7 @@
                                     [UIView animateWithDuration:ANIMATION_DURATION
                                                      animations:^
                                                      {
-                                                       self.tableView.contentInset
+                                                       self.scrollView.contentInset
                                                          = UIEdgeInsetsZero;
                                                      }];
                                   }];

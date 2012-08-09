@@ -12,7 +12,7 @@
 
 @interface DSPullToRefreshController: NSObject
 @property (nonatomic, weak) IBOutlet id<DSPullToRefreshControllerDelegate> delegate;
-@property (nonatomic, strong) IBOutlet UITableView *tableView;
+@property (nonatomic, strong) IBOutlet UIScrollView *scrollView;
 @property (nonatomic, strong) Class pullToRefreshViewClass;
 
 @property (nonatomic, strong, readonly) UIView<DSPullToRefreshView> *refreshView;

@@ -9,16 +9,30 @@
 @protocol DSPullToRefreshControllerDelegate;
 @protocol DSPullToRefreshView;
 
+typedef enum {
+  DSPullToRefreshViewPositionTop = 1,
+  DSPullToRefreshViewPositionRight = 1 << 1,
+  DSPullToRefreshViewPositionBottom = 1 << 2,
+  DSPullToRefreshViewPositionLeft = 1 << 3
+} DSPullToRefreshViewPosition;
 
 @interface DSPullToRefreshController: NSObject
 /** REQUIRED */
 @property (nonatomic, weak) IBOutlet id<DSPullToRefreshControllerDelegate> delegate;
 @property (nonatomic, strong) IBOutlet UIScrollView *scrollView;
-@property (nonatomic, strong) Class pullToRefreshViewClass;
 
-@property (nonatomic, strong, readonly) UIView<DSPullToRefreshView> *refreshView;
+@property (nonatomic, strong) Class pullToRefreshViewClassHorizontal;
+@property (nonatomic, strong) Class pullToRefreshViewClassVertical;
+
+@property (nonatomic, strong, readonly) UIView<DSPullToRefreshView> *refreshViewLeft;
+@property (nonatomic, strong, readonly) UIView<DSPullToRefreshView> *refreshViewRight;
+@property (nonatomic, strong, readonly) UIView<DSPullToRefreshView> *refreshViewBottom;
+@property (nonatomic, strong, readonly) UIView<DSPullToRefreshView> *refreshViewTop;
+
+/** DSPullToRefreshViewPositionLeft | DSPullToRefreshViewPositionRight - is possible */
+@property (nonatomic, assign) DSPullToRefreshViewPosition viewsPositions;
+
 - (void)createViewHierarchy;
-
 
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView;
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView;

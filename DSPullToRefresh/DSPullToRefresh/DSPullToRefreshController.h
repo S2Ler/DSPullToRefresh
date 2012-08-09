@@ -7,6 +7,7 @@
 #import <Foundation/Foundation.h>
 
 @protocol DSPullToRefreshControllerDelegate;
+@protocol DSPullToRefreshView;
 
 
 @interface DSPullToRefreshController: NSObject
@@ -14,6 +15,7 @@
 @property (nonatomic, strong) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) Class pullToRefreshViewClass;
 
+@property (nonatomic, strong, readonly) UIView<DSPullToRefreshView> *refreshView;
 - (void)createViewHierarchy;
 
 

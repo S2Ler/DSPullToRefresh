@@ -11,6 +11,10 @@
 #import "DSPullToRefreshViewControllerDelegate.h"
 
 #pragma mark - private
+@interface DSPullToRefreshViewController()
+@end
+
+#pragma mark - private
 #define ANIMATION_DURATION 0.3
 
 @interface DSPullToRefreshViewController ()

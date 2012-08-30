@@ -93,8 +93,10 @@
   NSAssert(theWorkOperation, nil);
   [theWorkOperation setCompletionBlock:^
   {
-    theHandler(YES);
-    [self finished];
+    dispatch_async(dispatch_get_main_queue(), ^{
+      theHandler(YES);
+      [self finished];
+    });
   }];
 
   [[self operationQueue] addOperation:theWorkOperation];
